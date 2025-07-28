@@ -1,0 +1,27 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite our paper:"
+title: "TODO"
+authors:
+  - family-names: Roni
+    given-names: Cohen-Fultheim
+    orcid: https://orcid.org/0000-0002-9099-5157
+  - family-names: Itamar
+    given-names: Twersky
+    orcid: https://orcid.org/0000-0002-9099-5157  # <-- Replace with co-author's ORCID
+  - family-names: Levanon
+    given-names: Erez
+    orcid: https://orcid.org/0000-0000-0000-0000  # <-- Replace with co-author's ORCID
+    affiliation: Levanon Lab, Bar-Ilan University
+date-released: 2025-07-28
+version: "1.0.0"
+doi: 10.1234/example.doi.2025.001  # <-- Replace with real DOI when available
+url: https://github.com/roni-fultheim/CEI
+repository-code: https://github.com/roni-fultheim/CEI
+license: Apache-2.0
+type: software
+keywords:
+  - RNA editing
+  - A-to-I editing
+  - cloud computing
+  - bioinformatics
+  - reproducible research
