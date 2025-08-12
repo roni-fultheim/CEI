@@ -69,8 +69,9 @@ For restricted access data (dbGaP, supported only on AWS)
 nohup ~/nextflow -c rna_editing.awsFargate.config -bg run rna_editing.nf -profile <SE,stranded> --run_title <RUN_TITLE> --srrACC_list <SRR_LIST> --NGC_file <NGC_FILE> > log.out 2> log.err &
 ```
 
+    
 ---
-
+    
 ## Required Parameters Details
 The following parameters must be provided, either directly via flags or within a configuration file:
 
