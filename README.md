@@ -55,7 +55,7 @@ TODO - check diff for AWS\GCP
 sh Init/init_main.sh
 ```
 
-### Step 3 — Run the Analysis
+### Step 3: Run the Analysis
 After initialization, launch the analysis workflow.
 
 **Option 1 — Pass parameters via command line (example for AWS):**
@@ -76,7 +76,7 @@ nohup ~/nextflow -C rna_editing.awsFargate.config -bg run rna_editing.nf -profil
 ### Required Parameters
 The following parameters must be provided, either directly via flags or within a configuration file:
 
-For using AWS to run on SRA:
+For using AWS to run on SRA (see [Nextflow for Fargate documentation](https://www.nextflow.io/docs/latest/aws.html#aws-fargate)):
 | Parameter  | Description |
 |------------|-------------|
 | `--ecr_region` | Description of parameter 1 |
@@ -90,7 +90,7 @@ For using AWS to run on SRA:
 | `--run_title` | Description of parameter 2 - in general config, per-run |
 | `--NGC_file` | Description of parameter 2 - in general config, per-run, not required |
 
-For using AWS to run on TCGA:
+For using AWS to run on TCGA (see [Nextflow for Fargate documentation](https://www.nextflow.io/docs/latest/aws.html#aws-fargate)):
 | Parameter  | Description |
 |------------|-------------|
 | `--ecr_region` | Description of parameter 1 |
