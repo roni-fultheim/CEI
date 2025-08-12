@@ -110,14 +110,11 @@ For using AWS to run on TCGA:
 For GCP:
 | Parameter  | Description |
 |------------|-------------|
-| `--ecr_region` | Description of parameter 1 |
-| `--ecr_user_id` | Description of parameter 2 |
+| `--project_name` | Description of parameter 2 |
 | `--bucket_name` | Description of parameter 2 |
-| `--process_queue` | Description of parameter 2 |
-| `--jobRole` | Description of parameter 2 |
-| `--executionRole` | Description of parameter 2 |
-| `--tower_access_token` | Description of parameter 2 |
-| `--workspace_id` | Description of parameter 2 |
+| `--run_title` | Description of parameter 2 - in general config, per-run |
+| `--srrACC_list` | Description of parameter 1 - in NF worklow, per-run |
+
 
 ---
 
