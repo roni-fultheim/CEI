@@ -85,9 +85,9 @@ For using AWS to run on SRA (see [Nextflow for Fargate documentation](https://ww
 | `--tower_access_token` | Nextflow [Seqera access token](https://www.nextflow.io/docs/latest/wave.html) | Nextflow parameter | User parameters config |
 | `--workspace_id` | Nextflow [Seqera workspace ID](https://www.nextflow.io/docs/latest/wave.html) | Nextflow parameter | User parameters config |
 | `--bucket_name` | Resources bucket | AWS parameter | User parameters config |
-| `--run_title` | Title of current run | User parameter | General config |
-| `--srrACC_list` | File with SRA accessions | User parameter | General config |
-| `--NGC_file` | NGC file for [restricted dbGaP access](https://www.ncbi.nlm.nih.gov/sra/docs/sra-dbGAP-cloud-download/), not required | User parameter | General config |
+| `--run_title` | Title of current run | Per-run parameter | General config |
+| `--srrACC_list` | File with SRA accessions | Per-run parameter | General config |
+| `--NGC_file` | NGC file for [restricted dbGaP access](https://www.ncbi.nlm.nih.gov/sra/docs/sra-dbGAP-cloud-download/), not required | Per-run parameter | General config |
 
 For using AWS to run on TCGA (see [Nextflow for Fargate documentation](https://www.nextflow.io/docs/latest/aws.html#aws-fargate)):
 | Parameter  | Description | Type   | Configuration File |
@@ -99,19 +99,19 @@ For using AWS to run on TCGA (see [Nextflow for Fargate documentation](https://w
 | `--tower_access_token` | Nextflow [Seqera access token](https://www.nextflow.io/docs/latest/wave.html) | Nextflow parameter | User parameters config |
 | `--workspace_id` | Nextflow [Seqera workspace ID](https://www.nextflow.io/docs/latest/wave.html) | Nextflow parameter | User parameters config |
 | `--resources_bucket_name` | Resources bucket | AWS parameter | User parameters config |
-| `--results_bucket_name` | Output bucket | User parameter | User parameters config |
+| `--results_bucket_name` | Output bucket | AWS parameter | User parameters config |
 | `--GDC_token` | GCD [authorization token](https://docs.gdc.cancer.gov/Data/Data_Security/Data_Security/) | User parameter | User parameters config |
 | `--run_title` | Title of current run in general config | Per-run parameter | General config |
 | `--gdc_UUID_list` | File with UUID accessions | Per-run parameter | General config |
 
 For GCP:
-| Parameter  | Description |
-|------------|-------------|
-| `--project_name` | GCP project workspace name |
-| `--region` | GCP region |
-| `--bucket_name` | Resources bucket |
-| `--run_title` | Title of current run in general config, per-run |
-| `--srrACC_list` | File with SRA accessions - in NF worklow, per-run |
+| Parameter  | Description | Type   | Configuration File |
+|------------|-------------|--------|--------------------|
+| `--project_name` | GCP project workspace name | GCP parameter | User parameters config |
+| `--region` | GCP region | GCP parameter | User parameters config |
+| `--bucket_name` | Resources bucket | GCP parameter | User parameters config |
+| `--run_title` | Title of current run in general config | Per-run parameter | General config |
+| `--srrACC_list` | File with SRA accessions | Per-run parameter | General config |
 
 
 
