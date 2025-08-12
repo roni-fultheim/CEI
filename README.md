@@ -13,7 +13,7 @@ This repository contains both the **cloud-computing platform** and **analysis co
 
 This project offers:
 - A cloud-native computing platform built with Nextflow, Docker, and GCP/AWS for high-throughput RNA editing analysis
-- Resources for quantifying both the **cytoplasmic editing index** and **global Alu editing index**
+- Resources for quantifying both the **cytoplasmic editing index (CEI)** and **global Alu editing index (AEI)**
 - Reproducible workflows for the analysis presented in the paper
 - Example datasets and configurations for running your own analysis
 
