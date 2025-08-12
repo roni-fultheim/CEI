@@ -50,9 +50,8 @@ Per-platform requirements:
 
 ### Step 2 - Initialize Resources
 Run the resource initialization script:
-TODO - check diff for AWS\GCP
 ```bash
-sh Init/init_main.sh
+sh Init/init_main.sh "AWS"
 ```
 
 ### Step 3 - Run the Analysis
