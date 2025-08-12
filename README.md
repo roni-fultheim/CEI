@@ -99,10 +99,10 @@ For using AWS to run on TCGA (see [Nextflow for Fargate documentation](https://w
 | `--tower_access_token` | Nextflow [Seqera access token](https://www.nextflow.io/docs/latest/wave.html) | Nextflow parameter | User parameters config |
 | `--workspace_id` | Nextflow [Seqera workspace ID](https://www.nextflow.io/docs/latest/wave.html) | Nextflow parameter | User parameters config |
 | `--resources_bucket_name` | Resources bucket | AWS parameter | User parameters config |
-| `--results_bucket_name` | Output bucket | User parameters config |
-| `--GDC_token` | GCD [authorization token](https://docs.gdc.cancer.gov/Data/Data_Security/Data_Security/) | User parameters config |
-| `--run_title` | Title of current run in general config, per-run | General config |
-| `--gdc_UUID_list` | File with UUID accessions | User parameter | Nextflow workflow | General config |
+| `--results_bucket_name` | Output bucket | User parameter | User parameters config |
+| `--GDC_token` | GCD [authorization token](https://docs.gdc.cancer.gov/Data/Data_Security/Data_Security/) | User parameter | User parameters config |
+| `--run_title` | Title of current run in general config | Per-run parameter | General config |
+| `--gdc_UUID_list` | File with UUID accessions | Per-run parameter | General config |
 
 For GCP:
 | Parameter  | Description |
