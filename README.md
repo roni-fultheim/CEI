@@ -71,7 +71,7 @@ nohup ~/nextflow -c rna_editing.awsFargate.config -bg run rna_editing.nf -profil
 
 ---
 
-### Required Parameters
+## Required Parameters Details
 The following parameters must be provided, either directly via flags or within a configuration file:
 
 For using AWS to run on SRA (see [Nextflow for Fargate documentation](https://www.nextflow.io/docs/latest/aws.html#aws-fargate)):
