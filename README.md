@@ -45,8 +45,8 @@ Before running the workflows, you must follow the initialization sequence below.
 Make sure your machine has updated versions of [Nextflow](https://www.nextflow.io/docs/latest/install.html) and [Docker](https://docs.docker.com/engine/install/).    
 In addition, the following should be available: `wget`, `curl`, `gzip`.     
 Per-platform requirements:    
-GCP - [gcloud CLI](https://cloud.google.com/sdk/docs/install) (including `gsutil`)    
-AWS - [AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html)    
+- GCP - [gcloud CLI](https://cloud.google.com/sdk/docs/install) (including `gsutil`)    
+- AWS - [AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html)    
 
 ### Step 2 — Initialize Resources
 Run the resource initialization script:
