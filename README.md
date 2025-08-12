@@ -28,8 +28,8 @@ CEI provides:
   - Editing within [known editing sites](https://doi.org/10.1038/s41467-022-28841-4)
   - Gene expression using [Salmon](https://salmon.readthedocs.io/en/latest/salmon.html)
 - Infrastructure support for:
-  - **GCP and AWS**
-  - Parallelized processing of **SRA** and **TCGA** samples
+  - **AWS and GCP** - note that the AWS pipeline is more advanced and we recommend using this version.
+  - Parallelized processing of **SRA** (FASTQ) and **TCGA** (BAM) samples.
 - Full analysis and plotting scripts for:
   - Benchmarking CEI vs global index
   - Immune-related editing response
@@ -45,8 +45,8 @@ Before running the workflows, you must follow the initialization sequence below.
 Make sure your machine has updated versions of [Nextflow](https://www.nextflow.io/docs/latest/install.html) and [Docker](https://docs.docker.com/engine/install/).    
 In addition, the following should be available: `wget`, `curl`, `gzip`.     
 Per-platform requirements:    
-- GCP - download and initialize [gcloud CLI](https://cloud.google.com/sdk/docs/install) (including `gsutil`)    
 - AWS - download and initialize [AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html)      
+- GCP - download and initialize [gcloud CLI](https://cloud.google.com/sdk/docs/install) (including `gsutil`)    
 
 ### Step 2 - Initialize Resources
 Run the resource initialization script:
@@ -79,41 +79,40 @@ The following parameters must be provided, either directly via flags or within a
 For using AWS to run on SRA (see [Nextflow for Fargate documentation](https://www.nextflow.io/docs/latest/aws.html#aws-fargate)):
 | Parameter  | Description |
 |------------|-------------|
-| `--ecr_region` | Description of parameter 1 |
-| `--ecr_user_id` | Description of parameter 2 |
-| `--bucket_name` | Description of parameter 2 |
-| `--process_queue` | Description of parameter 2 |
-| `--jobRole` | Description of parameter 2 |
-| `--executionRole` | Description of parameter 2 |
-| `--tower_access_token` | Description of parameter 2 |
-| `--workspace_id` | Description of parameter 2 |
-| `--run_title` | Description of parameter 2 - in general config, per-run |
-| `--NGC_file` | Description of parameter 2 - in general config, per-run, not required |
+| `--ecr_region` | AWS region |
+| `--process_queue` | AWS Batch queue for Fargate |
+| `--jobRole` | AWS Batch job role |
+| `--executionRole` | AWS Batch execution role |
+| `--bucket_name` | Resources bucket |
+| `--tower_access_token` | Nextflow [Seqera access token](https://www.nextflow.io/docs/latest/wave.html) |
+| `--workspace_id` | Nextflow [Seqera workspace ID](https://www.nextflow.io/docs/latest/wave.html) |
+| `--run_title` | Title of current run in general config, per-run |
+| `--srrACC_list` | File with SRA accessions - in NF worklow, per-run |
+| `--NGC_file` | NGC file for [restricted dbGaP access](https://www.ncbi.nlm.nih.gov/sra/docs/sra-dbGAP-cloud-download/) in general config, per-run, not required |
 
 For using AWS to run on TCGA (see [Nextflow for Fargate documentation](https://www.nextflow.io/docs/latest/aws.html#aws-fargate)):
 | Parameter  | Description |
 |------------|-------------|
-| `--ecr_region` | Description of parameter 1 |
-| `--ecr_user_id` | Description of parameter 2 |
-| `--resources_bucket_name` | Description of parameter 2 |
-| `--results_bucket_name` | Description of parameter 2 |
+| `--ecr_region` | AWS region |
+| `--resources_bucket_name` | Resources bucket |
+| `--results_bucket_name` | Output bucket |
 | `--process_spot_queue` | Description of parameter 2 |
 | `--jobRole` | Description of parameter 2 |
 | `--executionRole` | Description of parameter 2 |
 | `--tower_access_token` | Description of parameter 2 |
 | `--workspace_id` | Description of parameter 2 |
 | `--GDC_token` | Description of parameter 2 |
-| `--run_title` | Description of parameter 2 - in general config, per-run |
+| `--run_title` | Title of current run in general config, per-run |
 | `--gdc_UUID_list` | Description of parameter 2 - in general config, per-run |
-
 
 For GCP:
 | Parameter  | Description |
 |------------|-------------|
-| `--project_name` | Description of parameter 2 |
-| `--bucket_name` | Description of parameter 2 |
-| `--run_title` | Description of parameter 2 - in general config, per-run |
-| `--srrACC_list` | Description of parameter 1 - in NF worklow, per-run |
+| `--project_name` | GCP project workspace name |
+## TODO REGION
+| `--bucket_name` | Resources bucket |
+| `--run_title` | Title of current run in general config, per-run |
+| `--srrACC_list` | File with SRA accessions - in NF worklow, per-run |
 
 
 ---
