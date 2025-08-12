@@ -51,7 +51,7 @@ Per-platform requirements:
 ### Step 2 - Initialize Resources
 Run the resource initialization script:
 ```bash
-sh Init/init_main.sh "AWS"
+nohup sh Init/init_main.sh <AWS/GCP> <REGION> <BUCKET_NAME> > init.out 2> init.err &
 ```
 
 ### Step 3 - Run the Analysis
