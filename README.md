@@ -41,14 +41,14 @@ CEI provides:
 
 Before running the workflows, you must follow the initialization sequence below.
 
-### Step 1 — Initialize the Machine
+### Step 1 - Initialize the Machine
 Make sure your machine has updated versions of [Nextflow](https://www.nextflow.io/docs/latest/install.html) and [Docker](https://docs.docker.com/engine/install/).    
 In addition, the following should be available: `wget`, `curl`, `gzip`.     
 Per-platform requirements:    
 - GCP - download and initialize [gcloud CLI](https://cloud.google.com/sdk/docs/install) (including `gsutil`)    
 - AWS - download and initialize [AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html)      
 
-### Step 2 — Initialize Resources
+### Step 2 - Initialize Resources
 Run the resource initialization script:
 TODO - check diff for AWS\GCP
 ```bash
@@ -58,14 +58,14 @@ sh Init/init_main.sh
 ### Step 3: Run the Analysis
 After initialization, launch the analysis workflow.
 
-**Option 1 — Pass parameters via command line (example for AWS):**
+**Option 1 - Pass parameters via command line (example for AWS):**
 ```bash
 cd <YOUR_WORKDIR>
 nohup ~/nextflow -C rna_editing.awsFargate.config -bg run rna_editing.nf -profile SE,stranded --run_title <RUN_TITLE> --ecr_region <REGION> --ecr_user_id <ID> --bucket_namee <BUCKET> > log.out 2> log.err &
 
 ```
 
-**Option 2 — Use a configuration file:**
+**Option 2 - Use a configuration file:**
 Change the user parameters within ``rna_editing.awsFargate.user_params.config``, then run
 ```bash
 nohup ~/nextflow -C rna_editing.awsFargate.config -bg run rna_editing.nf -profile SE,stranded --run_title <RUN_TITLE> > log.out 2> log.err &
