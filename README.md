@@ -108,7 +108,7 @@ For GCP:
 | Parameter  | Description |
 |------------|-------------|
 | `--project_name` | GCP project workspace name |
-## TODO REGION
+| `--region` | GCP region |
 | `--bucket_name` | Resources bucket |
 | `--run_title` | Title of current run in general config, per-run |
 | `--srrACC_list` | File with SRA accessions - in NF worklow, per-run |
