@@ -72,37 +72,37 @@ nohup ~/nextflow -c rna_editing.awsFargate.config -bg run rna_editing.nf -profil
     
 ---
     
-## Required Parameters Details
+## Parameters Details
 The following parameters must be provided, either directly via flags or within a configuration file:
 
 For using AWS to run on SRA (see [Nextflow for Fargate documentation](https://www.nextflow.io/docs/latest/aws.html#aws-fargate)):
-| Parameter  | Description |
-|------------|-------------|
-| `--ecr_region` | AWS region |
-| `--process_queue` | AWS Batch queue for Fargate |
-| `--jobRole` | AWS Batch job role |
-| `--executionRole` | AWS Batch execution role |
-| `--tower_access_token` | Nextflow [Seqera access token](https://www.nextflow.io/docs/latest/wave.html) |
-| `--workspace_id` | Nextflow [Seqera workspace ID](https://www.nextflow.io/docs/latest/wave.html) |
-| `--bucket_name` | Resources bucket |
-| `--run_title` | Title of current run in general config, per-run |
-| `--srrACC_list` | File with SRA accessions - in NF worklow, per-run |
-| `--NGC_file` | NGC file for [restricted dbGaP access](https://www.ncbi.nlm.nih.gov/sra/docs/sra-dbGAP-cloud-download/) in general config, per-run, not required |
+| Parameter  | Description | Type   | Configuration File |
+|------------|-------------|--------|--------------------|
+| `--ecr_region` | AWS region | AWS parameter | User parameters config |
+| `--process_queue` | AWS Batch queue for Fargate | AWS parameter | User parameters config |
+| `--jobRole` | AWS Batch job role | AWS parameter | User parameters config |
+| `--executionRole` | AWS Batch execution role | AWS parameter | User parameters config |
+| `--tower_access_token` | Nextflow [Seqera access token](https://www.nextflow.io/docs/latest/wave.html) | Nextflow parameter | User parameters config |
+| `--workspace_id` | Nextflow [Seqera workspace ID](https://www.nextflow.io/docs/latest/wave.html) | Nextflow parameter | User parameters config |
+| `--bucket_name` | Resources bucket | AWS parameter | User parameters config |
+| `--run_title` | Title of current run | User parameter | General config |
+| `--srrACC_list` | File with SRA accessions | User parameter | General config |
+| `--NGC_file` | NGC file for [restricted dbGaP access](https://www.ncbi.nlm.nih.gov/sra/docs/sra-dbGAP-cloud-download/), not required | User parameter | General config |
 
 For using AWS to run on TCGA (see [Nextflow for Fargate documentation](https://www.nextflow.io/docs/latest/aws.html#aws-fargate)):
-| Parameter  | Description |
-|------------|-------------|
-| `--ecr_region` | AWS region |
-| `--process_spot_queue` | AWS Batch queue for Fargate |
-| `--jobRole` | AWS Batch job role |
-| `--executionRole` | AWS Batch execution role |
-| `--tower_access_token` | Nextflow [Seqera access token](https://www.nextflow.io/docs/latest/wave.html) |
-| `--workspace_id` | Nextflow [Seqera workspace ID](https://www.nextflow.io/docs/latest/wave.html) |
-| `--resources_bucket_name` | Resources bucket |
-| `--results_bucket_name` | Output bucket |
-| `--GDC_token` | GCD [authorization token](https://docs.gdc.cancer.gov/Data/Data_Security/Data_Security/) |
-| `--run_title` | Title of current run in general config, per-run |
-| `--gdc_UUID_list` | File with UUID accessions |
+| Parameter  | Description | Type   | Configuration File |
+|------------|-------------|--------|--------------------|
+| `--ecr_region` | AWS region | AWS parameter | User parameters config |
+| `--process_spot_queue` | AWS Batch queue for Fargate | AWS parameter | User parameters config |
+| `--jobRole` | AWS Batch job role | AWS parameter | User parameters config |
+| `--executionRole` | AWS Batch execution role | AWS parameter | User parameters config |
+| `--tower_access_token` | Nextflow [Seqera access token](https://www.nextflow.io/docs/latest/wave.html) | Nextflow parameter | User parameters config |
+| `--workspace_id` | Nextflow [Seqera workspace ID](https://www.nextflow.io/docs/latest/wave.html) | Nextflow parameter | User parameters config |
+| `--resources_bucket_name` | Resources bucket | AWS parameter | User parameters config |
+| `--results_bucket_name` | Output bucket | User parameters config |
+| `--GDC_token` | GCD [authorization token](https://docs.gdc.cancer.gov/Data/Data_Security/Data_Security/) | User parameters config |
+| `--run_title` | Title of current run in general config, per-run | General config |
+| `--gdc_UUID_list` | File with UUID accessions | User parameter | Nextflow workflow | General config |
 
 For GCP:
 | Parameter  | Description |
