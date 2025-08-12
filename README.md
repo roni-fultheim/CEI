@@ -82,9 +82,9 @@ For using AWS to run on SRA (see [Nextflow for Fargate documentation](https://ww
 | `--process_queue` | AWS Batch queue for Fargate |
 | `--jobRole` | AWS Batch job role |
 | `--executionRole` | AWS Batch execution role |
-| `--bucket_name` | Resources bucket |
 | `--tower_access_token` | Nextflow [Seqera access token](https://www.nextflow.io/docs/latest/wave.html) |
 | `--workspace_id` | Nextflow [Seqera workspace ID](https://www.nextflow.io/docs/latest/wave.html) |
+| `--bucket_name` | Resources bucket |
 | `--run_title` | Title of current run in general config, per-run |
 | `--srrACC_list` | File with SRA accessions - in NF worklow, per-run |
 | `--NGC_file` | NGC file for [restricted dbGaP access](https://www.ncbi.nlm.nih.gov/sra/docs/sra-dbGAP-cloud-download/) in general config, per-run, not required |
@@ -93,16 +93,16 @@ For using AWS to run on TCGA (see [Nextflow for Fargate documentation](https://w
 | Parameter  | Description |
 |------------|-------------|
 | `--ecr_region` | AWS region |
+| `--process_spot_queue` | AWS Batch queue for Fargate |
+| `--jobRole` | AWS Batch job role |
+| `--executionRole` | AWS Batch execution role |
+| `--tower_access_token` | Nextflow [Seqera access token](https://www.nextflow.io/docs/latest/wave.html) |
+| `--workspace_id` | Nextflow [Seqera workspace ID](https://www.nextflow.io/docs/latest/wave.html) |
 | `--resources_bucket_name` | Resources bucket |
 | `--results_bucket_name` | Output bucket |
-| `--process_spot_queue` | Description of parameter 2 |
-| `--jobRole` | Description of parameter 2 |
-| `--executionRole` | Description of parameter 2 |
-| `--tower_access_token` | Description of parameter 2 |
-| `--workspace_id` | Description of parameter 2 |
-| `--GDC_token` | Description of parameter 2 |
+| `--GDC_token` | GCD [authorization token](https://docs.gdc.cancer.gov/Data/Data_Security/Data_Security/) |
 | `--run_title` | Title of current run in general config, per-run |
-| `--gdc_UUID_list` | Description of parameter 2 - in general config, per-run |
+| `--gdc_UUID_list` | File with UUID accessions |
 
 For GCP:
 | Parameter  | Description |
