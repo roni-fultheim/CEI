@@ -58,17 +58,12 @@ sh Init/init_main.sh
 ### Step 3 - Run the Analysis
 After initialization, launch the analysis workflow.
 
-**Option 1 - Pass parameters via command line (example for AWS):**
-```bash
-cd <YOUR_WORKDIR>
-nohup ~/nextflow -C rna_editing.awsFargate.config -bg run rna_editing.nf -profile SE,stranded --run_title <RUN_TITLE> --ecr_region <REGION> --ecr_user_id <ID> --bucket_namee <BUCKET> > log.out 2> log.err &
-
-```
-
-**Option 2 - Use a configuration file:**
+**1. Update user parameters configuration file:**
 Change the user parameters within ``rna_editing.awsFargate.user_params.config``, then run
+
+
 ```bash
-nohup ~/nextflow -C rna_editing.awsFargate.config -bg run rna_editing.nf -profile SE,stranded --run_title <RUN_TITLE> > log.out 2> log.err &
+nohup ~/nextflow -c rna_editing.awsFargate.config -bg run rna_editing.nf -profile <SE,stranded> --run_title <RUN_TITLE> --srrACC_list <SRR_LIST> > log.out 2> log.err &
 ```
 
 ---
@@ -115,10 +110,4 @@ For GCP:
 | `--srrACC_list` | File with SRA accessions - in NF worklow, per-run |
 
 
----
-
-### 1. Cloud Setup
-See instructions in `CloudPipeline/README.md` for:
-- Setting up GCP/AWS environments
-- Running the `SRA_pipeline` and `TCGA_pipeline`
 
