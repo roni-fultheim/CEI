@@ -58,11 +58,15 @@ sh Init/init_main.sh "AWS"
 After initialization, launch the analysis workflow.
 
 **1. Update user parameters configuration file:**
-Change the user parameters within ``rna_editing.awsFargate.user_params.config``, then run
+Change the user parameters within ``rna_editing.awsFargate.user_params.config``
 
-
+**2. Run:**
 ```bash
 nohup ~/nextflow -c rna_editing.awsFargate.config -bg run rna_editing.nf -profile <SE,stranded> --run_title <RUN_TITLE> --srrACC_list <SRR_LIST> > log.out 2> log.err &
+```
+For restricted access data (dbGaP, supported only on AWS)
+```bash
+nohup ~/nextflow -c rna_editing.awsFargate.config -bg run rna_editing.nf -profile <SE,stranded> --run_title <RUN_TITLE> --srrACC_list <SRR_LIST> --NGC_file <NGC_FILE> > log.out 2> log.err &
 ```
 
 ---
