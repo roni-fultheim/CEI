@@ -55,7 +55,7 @@ TODO - check diff for AWS\GCP
 sh Init/init_main.sh
 ```
 
-### Step 3: Run the Analysis
+### Step 3 - Run the Analysis
 After initialization, launch the analysis workflow.
 
 **Option 1 - Pass parameters via command line (example for AWS):**
