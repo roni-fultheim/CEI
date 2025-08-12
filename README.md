@@ -26,7 +26,7 @@ CEI provides:
   - The **Cytoplasmic Editing Index (CEI)**  
   - The **Global Alu Editing Index (AEI)**
   - Editing within [known editing sites](https://doi.org/10.1038/s41467-022-28841-4)
-  - Gene expression
+  - Gene expression [(Salmon)](https://salmon.readthedocs.io/en/latest/salmon.html)
 - Infrastructure support for:
   - **GCP and AWS**
   - Parallelized processing of **SRA** and **TCGA** samples
