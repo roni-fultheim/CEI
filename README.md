@@ -7,6 +7,16 @@ This repository contains both the **cloud-computing platform** and **analysis co
 > Authors
 > [DOI: 10.1234/example.doi.2025.001](https://doi.org/10.1234/example.doi.2025.001)
 
+
+## 📑 Table of Contents
+- [Overview](#-overview)
+- [Repository Structure](#-repository-structure)
+- [Getting Started](#-getting-started)
+  - [Step 1 - Initialize the Machine](#step-1---initialize-the-machine)
+  - [Step 2 - Initialize Resources](#step-2---initialize-resources)
+  - [Step 3 - Run the Analysis](#step-3---run-the-analysis)
+- [Parameters Details](#parameters-details)
+
 ---
 
 ## 🧬 Overview
