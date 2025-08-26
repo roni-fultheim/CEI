@@ -61,8 +61,14 @@ Per-platform requirements:
 ### Step 2 - Initialize Resources
 Run the resource initialization script:
 ```bash
-nohup sh CloudPipeline/Init/init_main.sh <AWS/GCP> <REGION> <BUCKET_NAME> <NUM_THREADS>  > init.out 2> init.err &
+nohup sh CloudPipeline/Init/init_main.sh <PLATFORM> <REGION> <BUCKET_NAME> <NUM_THREADS>  > init.out 2> init.err &
 ```
+| Parameter  | Position | Description | Allowed Values |
+|------------|----------|-------------|----------------|
+| `PLATFORM` | 1 | Which platform is used | `GCP` or `AWS` |
+| `REGION` | 2 | Region in which the  resources bucket is to be located | Any region of platform (examples: us-central1, us-east1, etc.) |
+| `BUCKET_NAME` | 3 | Wanted resources bucket name | Any name complying with platform criteria |
+| `NUM_THREADS` | 4 | Number of threads for STAR and salmon index generation | Positive whole numbers |
 Default for number of threads for generation of STAR and Salmon indices is 10. STAR requires at least 64G RAM for this process.
 
 ### Step 3 - Run the Analysis
