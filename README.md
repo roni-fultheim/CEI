@@ -75,19 +75,32 @@ Default for number of threads for generation of STAR and Salmon indices is 10. S
 ### Step 3 - Run the Analysis
 After initialization, launch the analysis workflow.     
 Example for AWS - for GCP, use the files within the GCP directory.      
+Profiles and parameters detailed below.        
 
 **1. Update user parameters configuration file:**    
 Change the user parameters within ``CloudPipeline/AWS/SRA_pipeline/rna_editing.user_params.config``
 
 **2. Run:**
 ```bash
-nohup ~/nextflow -c CloudPipeline/AWS/SRA_pipeline/rna_editing.config -bg CloudPipeline/AWS/SRA_pipeline/run rna_editing.nf -profile <SE,stranded> --run_title <RUN_TITLE> --srrACC_list <SRR_LIST> > log.out 2> log.err &
+nohup ~/nextflow -c CloudPipeline/AWS/SRA_pipeline/rna_editing.config -bg CloudPipeline/AWS/SRA_pipeline/run rna_editing.nf -profile <SE,stranded,RL75> --run_title <RUN_TITLE> --srrACC_list <SRR_LIST> > log.out 2> log.err &
 ```
 For restricted access data (dbGaP, supported only on AWS)
 ```bash
-nohup ~/nextflow -c CloudPipeline/AWS/SRA_pipeline/rna_editing.config -bg run CloudPipeline/AWS/SRA_pipeline/rna_editing.nf -profile <SE,stranded> --run_title <RUN_TITLE> --srrACC_list <SRR_LIST> --NGC_file <NGC_FILE> > log.out 2> log.err &
+nohup ~/nextflow -c CloudPipeline/AWS/SRA_pipeline/rna_editing.config -bg run CloudPipeline/AWS/SRA_pipeline/rna_editing.nf -profile <SE,stranded,RL75> --run_title <RUN_TITLE> --srrACC_list <SRR_LIST> --NGC_file <NGC_FILE> > log.out 2> log.err &
 ```
+---
+    
+## Parameters Details
+The following parameters must be provided, either directly via flags or within a configuration file:
 
+For using AWS to run on SRA (see [Nextflow for Fargate documentation](https://www.nextflow.io/docs/latest/aws.html#aws-fargate)):
+| Parameter  | Description | Type   | Configuration File |
+|------------|-------------|--------|--------------------|
+| `--ecr_region` | AWS region | AWS parameter | User parameters config |
+| `--process_queue` | AWS Batch queue for Fargate | AWS parameter | User parameters config |
+| `--jobRole` | AWS Batch job role | AWS parameter | User parameters config |
+| `--executionRole` | AWS Batch execution role | AWS parameter | User parameters config |
+| `--tower_access_token` | Nextflow [Seqera access token](https://www.nextflow.io/docs/latest/wave.html) | Nextflow parameter | User parameters config |
     
 ---
     
