@@ -17,6 +17,9 @@ This repository contains both the **cloud-computing platform** and **analysis co
   - [Step 3 - Run the Analysis](#step-3---run-the-analysis)
 - [Profiles](#profiles)
 - [Parameters Details](#parameters-details)
+  - [AWS – SRA](#for-using-aws-to-run-on-sra-see-nextflow-for-fargate-documentation)
+  - [AWS – TCGA](#for-using-aws-to-run-on-tcga-see-nextflow-for-fargate-documentation)
+  - [GCP](#for-gcp)
 
 ---
 
