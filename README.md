@@ -59,7 +59,8 @@ Default for number of threads for generation of STAR and Salmon indices is 10. S
 After initialization, launch the analysis workflow.
 
 **1. Update user parameters configuration file:**
-Change the user parameters within ``rna_editing.user_params.config``
+Example for AWS - for GCP, use the files within the GCP directory.
+Change the user parameters within ``CloudPipeline/AWS/SRA_pipeline/rna_editing.user_params.config``
 
 **2. Run:**
 ```bash
