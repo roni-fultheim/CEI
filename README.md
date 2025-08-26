@@ -59,7 +59,7 @@ Default for number of threads for generation of STAR and Salmon indices is 10. S
 After initialization, launch the analysis workflow.
 
 **1. Update user parameters configuration file:**
-Change the user parameters within ``rna_editing.awsFargate.user_params.config``
+Change the user parameters within ``rna_editing.user_params.config``
 
 **2. Run:**
 ```bash
