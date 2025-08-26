@@ -51,7 +51,7 @@ Per-platform requirements:
 ### Step 2 - Initialize Resources
 Run the resource initialization script:
 ```bash
-nohup sh Init/init_main.sh <AWS/GCP> <REGION> <BUCKET_NAME> <NUM_THREADS> init.out 2> init.err &
+nohup sh Init/init_main.sh <AWS/GCP> <REGION> <BUCKET_NAME> <NUM_THREADS>  > init.out 2> init.err &
 ```
 Default for number of threads for generation of STAR and Salmon indices is 10. STAR requires at least 64G RAM for this process.
 
