@@ -20,6 +20,7 @@ This repository contains both the **cloud-computing platform** and **analysis co
   - [AWS – SRA](#for-using-aws-to-run-on-sra-see-nextflow-for-fargate-documentation)
   - [AWS – TCGA](#for-using-aws-to-run-on-tcga-see-nextflow-for-fargate-documentation)
   - [GCP](#for-gcp)
+- [Docker Images](#docker-images)
 
 ---
 
@@ -151,5 +152,18 @@ For GCP:
 | `--run_title` | Title of current run in general config | Per-run parameter | General config |
 | `--srrACC_list` | File with SRA accessions | Per-run parameter | General config |
 
+    
+---
+    
 
+## Docker Images
+Images used in this workflow:
+| Step  | Image | Source | 
+|-------|-------|--------|
+| Downloading | levanonlab/sratoolkit:3.2.1 | (staphb/sratoolkit:3.2.1)[https://hub.docker.com/r/staphb/sratoolkit/] |
+| Preprocessing | levanonlab/fastp:0.23.4--hadf994f_2 | (quay.io/biocontainers/fastp:0.23.4--hadf994f_2)[https://quay.io/repository/biocontainers/fastp?tab=tags&tag=0.23.4--hadf994f_2] |
+| Expression quantification | levanonlab/salmon:1.10.2--hecfa306_0 | (quay.io/biocontainers/salmon:1.10.2--hecfa306_0)[https://quay.io/repository/biocontainers/salmon?tab=tags&tag=1.10.2--hecfa306_0] |
+| Alignment | levanonlab/star:2.7.10b--h9ee0642_0 | (quay.io/biocontainers/star:2.7.10b--h9ee0642_0)[https://quay.io/repository/biocontainers/star?tab=tags&tag=2.7.10b--h9ee0642_0] |
+| RNA editing index | levanonlab/rna-editing-index-lite:1.0.time |   |
+| Per-site editing quantification | levanonlab/cmpileup:1.0 |   |
 
