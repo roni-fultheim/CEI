@@ -15,6 +15,7 @@ This repository contains both the **cloud-computing platform** and **analysis co
   - [Step 1 - Initialize the Machine](#step-1---initialize-the-machine)
   - [Step 2 - Initialize Resources](#step-2---initialize-resources)
   - [Step 3 - Run the Analysis](#step-3---run-the-analysis)
+- [Profiles](#profiles)
 - [Parameters Details](#parameters-details)
 
 ---
