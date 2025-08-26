@@ -94,12 +94,12 @@ nohup ~/nextflow -c CloudPipeline/AWS/SRA_pipeline/rna_editing.config -bg run Cl
 ## Profiles
 The following profiles are supported. Any combination of profile options can be used from these categories, but at least one profile must be used from each category. See (Nextflow documentation)[https://www.nextflow.io/docs/latest/config.html#config-profiles] to learn more about profiles.       
 
-| Category  | Options | Description |
-|-----------|---------|-------------|
-| Genome | `hg38`, `mm10` | Genome of organism - human or mouse |
-| Library type | `SE`, `PE` | Sequencing library type - single-end or paired-end |
-| Sequencing directionality | `stranded`, `unstranded` | Is the sequencing directional? Affects expression and editing quantification |
-| Sequencing length | `RL50`, `RL75`, `RL100`, `RL125`, `RL150` | Read length, affects preprocessing and STAR alignment |        
+| Category  | Options | Description | Steps Affected |
+|-----------|---------|-------------|----------------|
+| Genome | `hg38`, `mm10` | Genome of organism - human or mouse | Alignment, expression & editing quantification |
+| Library type | `SE`, `PE` | Sequencing library type - single-end or paired-end | Preprocessing, alignment, expression & editing quantification |
+| Sequencing directionality | `stranded`, `unstranded` | Is the sequencing directional? | Editing quantification |
+| Sequencing length | `RL50`, `RL75`, `RL100`, `RL125`, `RL150` | Read length | Preprocessing & alignment |        
 
 Note that stranded data can also be run as unstranded, without utilizing the strand information.     
 Read length should match the general read length or below, as reads shorten than wanted length by 3bp or more will be filtered out (see protocol at (TODO add article reference)[].
