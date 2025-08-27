@@ -21,8 +21,8 @@ This repository contains both the **cloud-computing platform** and **analysis co
   - [AWS – TCGA](#for-using-aws-to-run-on-tcga-see-nextflow-for-fargate-documentation)
   - [GCP](#for-gcp)
 - [Docker Images](#docker-images)
-  - [Workflow](#Images-used-in-this-workflow)
-  - [Initialization](#Images-used-in-initialization)
+  - [Workflow](#Workflow)
+  - [Initialization](#Initialization)
 
 ---
 
@@ -159,7 +159,7 @@ For GCP:
     
 
 ## Docker Images
-Images used in this workflow:
+### Workflow
 | Step  | Image | Source | 
 |-------|-------|--------|
 | Download SRA FASTQ files | levanonlab/sratoolkit:3.2.1 | [staphb/sratoolkit:3.2.1](https://hub.docker.com/r/staphb/sratoolkit/) |
@@ -171,7 +171,7 @@ Images used in this workflow:
 | Per-site editing quantification | levanonlab/cmpileup:1.0 |   |
 | Download TCGA BAM files | levanonlab/gdc-client:2.3.0 |  |
 
-Images used in initialization:
+### Initialization:
 | Step  | Image | Source | 
 | Resource processing | quay.io/biocontainers/bedtools | [quay.io/biocontainers/bedtools](https://quay.io/repository/biocontainers/bedtools?tab=tags&tag=latest) |
 | Resource processing | quay.io/biocontainers/ucsc-bigbedtobed | [quay.io/biocontainers/ucsc-bigbedtobed](https://quay.io/repository/biocontainers/bedtools?tab=tags&tag=latest) |
