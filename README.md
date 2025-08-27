@@ -165,6 +165,7 @@ Images used in this workflow:
 | Expression quantification | levanonlab/salmon:1.10.2--hecfa306_0 | [quay.io/biocontainers/salmon:1.10.2--hecfa306_0](https://quay.io/repository/biocontainers/salmon?tab=tags&tag=1.10.2--hecfa306_0) |
 | Alignment | levanonlab/star:2.7.10b--h9ee0642_0 | [quay.io/biocontainers/star:2.7.10b--h9ee0642_0](https://quay.io/repository/biocontainers/star?tab=tags&tag=2.7.10b--h9ee0642_0) |
 | RNA editing index | levanonlab/rna-editing-index-lite:1.0 |   |
+| RNA editing index & timing | levanonlab/rna-editing-index-lite:1.0.time |   |
 | Per-site editing quantification | levanonlab/cmpileup:1.0 |   |
 | Download TCGA BAM files | levanonlab/gdc-client:2.3.0 |  |
 
