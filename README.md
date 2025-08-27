@@ -173,6 +173,7 @@ For GCP:
 
 ### Initialization       
 | Step  | Image | Source | 
+|-------|-------|--------|
 | Resource processing | quay.io/biocontainers/bedtools | [quay.io/biocontainers/bedtools](https://quay.io/repository/biocontainers/bedtools?tab=tags&tag=latest) |
 | Resource processing | quay.io/biocontainers/ucsc-bigbedtobed | [quay.io/biocontainers/ucsc-bigbedtobed](https://quay.io/repository/biocontainers/bedtools?tab=tags&tag=latest) |
 | Region index generation | levanonlab/rna-editing-index-lite:1.0 | |
