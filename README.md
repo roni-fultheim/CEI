@@ -21,8 +21,8 @@ This repository contains both the **cloud-computing platform** and **analysis co
   - [AWS – TCGA](#for-using-aws-to-run-on-tcga-see-nextflow-for-fargate-documentation)
   - [GCP](#for-gcp)
 - [Docker Images](#docker-images)
-  - [Workflow](#Images-used-in-this-workflow:)
-  - [Initialization](#Images-used-in-initialization:)
+  - [Workflow](#Images-used-in-this-workflow)
+  - [Initialization](#Images-used-in-initialization)
 
 ---
 
