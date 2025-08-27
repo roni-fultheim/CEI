@@ -171,7 +171,7 @@ For GCP:
 | Per-site editing quantification | levanonlab/cmpileup:1.0 |   |
 | Download TCGA BAM files | levanonlab/gdc-client:2.3.0 |  |
 
-### Initialization:
+### Initialization       
 | Step  | Image | Source | 
 | Resource processing | quay.io/biocontainers/bedtools | [quay.io/biocontainers/bedtools](https://quay.io/repository/biocontainers/bedtools?tab=tags&tag=latest) |
 | Resource processing | quay.io/biocontainers/ucsc-bigbedtobed | [quay.io/biocontainers/ucsc-bigbedtobed](https://quay.io/repository/biocontainers/bedtools?tab=tags&tag=latest) |
