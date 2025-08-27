@@ -21,6 +21,8 @@ This repository contains both the **cloud-computing platform** and **analysis co
   - [AWS – TCGA](#for-using-aws-to-run-on-tcga-see-nextflow-for-fargate-documentation)
   - [GCP](#for-gcp)
 - [Docker Images](#docker-images)
+  - [Workflow](#Images-used-in-this-workflow:)
+  - [Initialization](#Images-used-in-initialization:)
 
 ---
 
@@ -168,4 +170,12 @@ Images used in this workflow:
 | RNA editing index & timing | levanonlab/rna-editing-index-lite:1.0.time |   |
 | Per-site editing quantification | levanonlab/cmpileup:1.0 |   |
 | Download TCGA BAM files | levanonlab/gdc-client:2.3.0 |  |
+
+Images used in initialization:
+| Step  | Image | Source | 
+| Resource processing | quay.io/biocontainers/bedtools | [quay.io/biocontainers/bedtools](https://quay.io/repository/biocontainers/bedtools?tab=tags&tag=latest) |
+| Resource processing | quay.io/biocontainers/ucsc-bigbedtobed | [quay.io/biocontainers/ucsc-bigbedtobed](https://quay.io/repository/biocontainers/bedtools?tab=tags&tag=latest) |
+| Region index generation | levanonlab/rna-editing-index-lite:1.0 | |
+| Salmon index generation | levanonlab/salmon:1.10.2--hecfa306_0 | [quay.io/biocontainers/salmon:1.10.2--hecfa306_0](https://quay.io/repository/biocontainers/salmon?tab=tags&tag=1.10.2--hecfa306_0) |
+| STAR index generation | levanonlab/star:2.7.10b--h9ee0642_0 | [quay.io/biocontainers/star:2.7.10b--h9ee0642_0](https://quay.io/repository/biocontainers/star?tab=tags&tag=2.7.10b--h9ee0642_0) |
 
