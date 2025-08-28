@@ -114,7 +114,7 @@ Read length should match the general read length or below, as reads shorten than
     
 ## Parameters Details
 The following parameters must be provided, either directly via flags or within a configuration file:
-
+    
 ### AWS        
 For using AWS to run on SRA (see [Nextflow for Fargate documentation](https://www.nextflow.io/docs/latest/aws.html#aws-fargate)):
 | Parameter  | Description | Type   | Configuration File |
@@ -144,7 +144,7 @@ For using AWS to run on TCGA (see [Nextflow for Fargate documentation](https://w
 | `--GDC_token` | GCD [authorization token](https://docs.gdc.cancer.gov/Data/Data_Security/Data_Security/) | User parameter | User parameters config |
 | `--run_title` | Title of current run in general config | Per-run parameter | General config |
 | `--gdc_UUID_list` | File with UUID accessions | Per-run parameter | General config |
-
+     
 ### GCP      
 For GCP:
 | Parameter  | Description | Type   | Configuration File |
