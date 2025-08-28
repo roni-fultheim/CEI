@@ -17,9 +17,8 @@ This repository contains both the **cloud-computing platform** and **analysis co
   - [Step 3 - Run the Analysis](#step-3---run-the-analysis)
 - [Profiles](#profiles)
 - [Parameters Details](#parameters-details)
-  - [AWS – SRA](#for-using-aws-to-run-on-sra-see-nextflow-for-fargate-documentation)
-  - [AWS – TCGA](#for-using-aws-to-run-on-tcga-see-nextflow-for-fargate-documentation)
-  - [GCP](#for-gcp)
+  - [AWS](#aws)
+  - [GCP](#gcp)
 - [Docker Images](#docker-images)
   - [Workflow](#Workflow)
   - [Initialization](#Initialization)
@@ -116,6 +115,7 @@ Read length should match the general read length or below, as reads shorten than
 ## Parameters Details
 The following parameters must be provided, either directly via flags or within a configuration file:
 
+### AWS        
 For using AWS to run on SRA (see [Nextflow for Fargate documentation](https://www.nextflow.io/docs/latest/aws.html#aws-fargate)):
 | Parameter  | Description | Type   | Configuration File |
 |------------|-------------|--------|--------------------|
@@ -145,6 +145,7 @@ For using AWS to run on TCGA (see [Nextflow for Fargate documentation](https://w
 | `--run_title` | Title of current run in general config | Per-run parameter | General config |
 | `--gdc_UUID_list` | File with UUID accessions | Per-run parameter | General config |
 
+### GCP      
 For GCP:
 | Parameter  | Description | Type   | Configuration File |
 |------------|-------------|--------|--------------------|
