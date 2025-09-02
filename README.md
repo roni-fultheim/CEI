@@ -176,8 +176,8 @@ For GCP:
 ### Initialization       
 | Step  | Image | Source | 
 |-------|-------|--------|
-| Resource processing | quay.io/biocontainers/bedtools | [quay.io/biocontainers/bedtools](https://quay.io/repository/biocontainers/bedtools?tab=tags&tag=latest) |
-| Resource processing | quay.io/biocontainers/ucsc-bigbedtobed | [quay.io/biocontainers/ucsc-bigbedtobed](https://quay.io/repository/biocontainers/bedtools?tab=tags&tag=latest) |
+| Resource processing | levanonlab/bedtools:2.31.1 | [quay.io/biocontainers/bedtools:2.31.1--h13024bc_3](https://quay.io/repository/biocontainers/bedtools?tab=tags&tag=latest) |
+| Resource processing | levanonlab/bigbedtobed:482--h0b57e2e_0 | [quay.io/biocontainers/ucsc-bigbedtobed:482--h0b57e2e_0](https://quay.io/repository/biocontainers/bedtools?tab=tags&tag=latest) |
 | Region index generation | levanonlab/rna-editing-index-lite:1.0 | |
 | Salmon index generation | levanonlab/salmon:1.10.2--hecfa306_0 | [quay.io/biocontainers/salmon:1.10.2--hecfa306_0](https://quay.io/repository/biocontainers/salmon?tab=tags&tag=1.10.2--hecfa306_0) |
 | STAR index generation | levanonlab/star:2.7.10b--h9ee0642_0 | [quay.io/biocontainers/star:2.7.10b--h9ee0642_0](https://quay.io/repository/biocontainers/star?tab=tags&tag=2.7.10b--h9ee0642_0) |
