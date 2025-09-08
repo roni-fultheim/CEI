@@ -62,10 +62,10 @@ Make sure your machine has updated versions of [Nextflow](https://www.nextflow.i
 In addition, the following should be available: `wget`, `curl`, `gzip`, `awk`.     
 Storage requirements for initialization: 350GB.     
 Per-platform requirements:    
-AWS       
+**AWS:**       
 - AWS - download and initialize [AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html)
 
-GCP     
+**GCP:**     
 - Download and initialize [gcloud CLI](https://cloud.google.com/sdk/docs/install) (including `gsutil`)
 - Initialize [GCP credentials]([https://cloud.google.com/sdk/docs/install](https://nextflow.io/docs/latest/google.html#cloud-batch))
 - Enable [GCP Batch API](https://cloud.google.com/batch/docs/get-started)
