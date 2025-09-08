@@ -63,7 +63,7 @@ In addition, the following should be available: `wget`, `curl`, `gzip`, `awk`.
 Storage requirements for initialization: 350GB.     
 Per-platform requirements:    
 - AWS - download and initialize [AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html)
-- GCP - download and initialize [gcloud CLI](https://cloud.google.com/sdk/docs/install) (including `gsutil`), initialize [GCP credentials]([https://cloud.google.com/sdk/docs/install](https://nextflow.io/docs/latest/google.html#cloud-batch)) and make sure [GCP Batch API](https://cloud.google.com/batch/docs/get-started) is enabled.
+- GCP - download and initialize [gcloud CLI](https://cloud.google.com/sdk/docs/install) (including `gsutil`), initialize [GCP credentials](https://nextflow.io/docs/latest/google.html#cloud-batch) and make sure [GCP Batch API](https://cloud.google.com/batch/docs/get-started) is enabled.
 
 ### Step 2 - Initialize Resources
 Run the resource initialization script:
