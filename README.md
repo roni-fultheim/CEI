@@ -71,13 +71,10 @@ AWS - downlo
 GCP      
 | **Principal**            | **Role**                             |
 |--------------------------|--------------------------------------|
-| **Editors of the project**| Storage Legacy Bucket Owner         |
-|                          | Storage Legacy Object Owner         |
-| **Owners of the project** | Storage Legacy Bucket Owner         |
-|                          | Storage Legacy Object Owner         |
-| **Service Account**       | Compute Engine Service Agent (for project ID: 883094370743) |
-| **Viewers of the project**| Storage Legacy Bucket Reader        |
-|                          | Storage Legacy Object Reader        |
+| **Editors of the project**| Storage Legacy Bucket Owner, Storage Legacy Object Owner         |
+| **Owners of the project** | Storage Legacy Bucket Owner, Storage Legacy Object Owner         |
+| **Service Account**       | Compute Engine Service Agent |
+| **Viewers of the project**| Storage Legacy Bucket Reader, Storage Legacy Object Reader        |
 
 
 ### Step 3 - Initialize Resources
