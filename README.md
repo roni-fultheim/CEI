@@ -65,7 +65,22 @@ Per-platform requirements:
 - AWS - download and initialize [AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html)
 - GCP - download and initialize [gcloud CLI](https://cloud.google.com/sdk/docs/install) (including `gsutil`), initialize [GCP credentials](https://nextflow.io/docs/latest/google.html#cloud-batch) and make sure [GCP Batch API](https://cloud.google.com/batch/docs/get-started) is enabled.
 
-### Step 2 - Initialize Resources
+### Step 3 - Initialize Resources
+Create a bucket for resources and output.      
+- AWS - downlo
+GCP
+| **Principal**            | **Role**                             |
+|--------------------------|--------------------------------------|
+| **Editors of the project**| Storage Legacy Bucket Owner         |
+|                          | Storage Legacy Object Owner         |
+| **Owners of the project** | Storage Legacy Bucket Owner         |
+|                          | Storage Legacy Object Owner         |
+| **Service Account**       | Compute Engine Service Agent (for project ID: 883094370743) |
+| **Viewers of the project**| Storage Legacy Bucket Reader        |
+|                          | Storage Legacy Object Reader        |
+
+
+### Step 3 - Initialize Resources
 Run the resource initialization script:
 ```bash
 nohup sh CloudPipeline/Init/init_main.sh <PLATFORM> <REGION> <BUCKET_NAME> <NUM_THREADS>  > init.out 2> init.err &
@@ -79,7 +94,7 @@ nohup sh CloudPipeline/Init/init_main.sh <PLATFORM> <REGION> <BUCKET_NAME> <NUM_
 
 Default for number of threads for generation of STAR and Salmon indices is 10. STAR requires at least 64G RAM for this process.
 
-### Step 3 - Run the Analysis
+### Step 4 - Run the Analysis
 After initialization, launch the analysis workflow.     
 Example for AWS - for GCP, use the files within the GCP directory.      
 [Profiles](#profiles) and [parameters](#parameters-details) detailed below.        
