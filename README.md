@@ -59,7 +59,7 @@ Before running the workflows, you must follow the initialization sequence below.
 
 ### Step 1 - Initialize the Machine
 Make sure your machine has updated versions of [Nextflow](https://www.nextflow.io/docs/latest/install.html) and [Docker](https://docs.docker.com/engine/install/). Make sure your user account has permission to access the Docker daemon.    
-In addition, the following should be available: `wget`, `curl`, `gzip`, `awk`.     
+In addition, the following should be available: `wget`, `curl`, `gzip`, `awk`. Notice `zip` and  `unzip` are also required for Nextflow installation.     
 Storage requirements for initialization: 350GB.     
 Per-platform requirements:    
 - AWS - download and initialize [AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html)
