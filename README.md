@@ -67,8 +67,8 @@ Per-platform requirements:
 
 ### Step 3 - Initialize Resources
 Create a bucket for resources and output.      
-- AWS - downlo
-GCP
+AWS - downlo       
+GCP      
 | **Principal**            | **Role**                             |
 |--------------------------|--------------------------------------|
 | **Editors of the project**| Storage Legacy Bucket Owner         |
