@@ -13,7 +13,7 @@ This repository contains both the **cloud-computing platform** and **analysis co
 - [Repository Structure](#-repository-structure)
 - [Getting Started](#-getting-started)
   - [Step 1 - Initialize the Machine](#step-1---initialize-the-machine)
-  - [Step 2 - Initialize Bucket](#step-2---initialize-bucket)
+  - [Step 2 - Initialize the Bucket](#step-2---initialize-the-bucket)
   - [Step 3 - Initialize Resources](#step-3---initialize-resources)
   - [Step 4 - Run the Analysis](#step-4---run-the-analysis)
 - [Profiles](#profiles)
@@ -66,7 +66,7 @@ Per-platform requirements:
 - AWS - download and initialize [AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html)
 - GCP - download and initialize [gcloud CLI](https://cloud.google.com/sdk/docs/install) (including `gsutil`), initialize [GCP credentials](https://nextflow.io/docs/latest/google.html#cloud-batch) and make sure [GCP Batch API](https://cloud.google.com/batch/docs/get-started) is enabled.
 
-### Step 2 - Initialize Bucket
+### Step 2 - Initialize the Bucket
 Create a bucket for resources and output.      
 AWS - downlo       
 - GCP - uniform access to bucket and the following IAM permissions:
