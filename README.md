@@ -68,7 +68,7 @@ Per-platform requirements:
 ### Step 3 - Initialize Resources
 Create a bucket for resources and output.      
 AWS - downlo       
-GCP      
+- GCP - uniform access to bucket and the following IAM permissions      
 | **Principal**            | **Role**                             |
 |--------------------------|--------------------------------------|
 | **Editors of the project**| Storage Legacy Bucket Owner, Storage Legacy Object Owner         |
