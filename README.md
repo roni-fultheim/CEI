@@ -65,10 +65,10 @@ Per-platform requirements:
 - AWS - download and initialize [AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html)
 - GCP - download and initialize [gcloud CLI](https://cloud.google.com/sdk/docs/install) (including `gsutil`), initialize [GCP credentials](https://nextflow.io/docs/latest/google.html#cloud-batch) and make sure [GCP Batch API](https://cloud.google.com/batch/docs/get-started) is enabled.
 
-### Step 3 - Initialize Resources
+### Step 2 - Initialize Bucket
 Create a bucket for resources and output.      
 AWS - downlo       
-- GCP - uniform access to bucket and the following IAM permissions
+- GCP - uniform access to bucket and the following IAM permissions:
 
 | **Principal**            | **Role**                             |
 |--------------------------|--------------------------------------|
