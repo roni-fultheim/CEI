@@ -11,18 +11,19 @@ This repository contains both the **cloud-computing platform** and **analysis co
 ## 📑 Table of Contents
 - [Overview](#-overview)
 - [Repository Structure](#-repository-structure)
-- [Getting Started](#-getting-started)
-  - [Step 1 - Initialize the Machine](#step-1---initialize-the-machine)
-  - [Step 2 - Initialize the Bucket](#step-2---initialize-the-bucket)
-  - [Step 3 - Initialize Resources](#step-3---initialize-resources)
-  - [Step 4 - Run the Analysis](#step-4---run-the-analysis)
-- [Profiles](#profiles)
-- [Parameters Details](#parameters-details)
-  - [AWS](#aws)
-  - [GCP](#gcp)
-- [Docker Images](#docker-images)
-  - [Workflow](#Workflow)
-  - [Initialization](#Initialization)
+- [Computational Cloud-Native Pipeline](#computational-cloud---native-pipeline)
+  - [Getting Started](#-getting-started)
+    - [Step 1 - Initialize the Machine](#step-1---initialize-the-machine)
+    - [Step 2 - Initialize the Bucket](#step-2---initialize-the-bucket)
+    - [Step 3 - Initialize Resources](#step-3---initialize-resources)
+    - [Step 4 - Run the Analysis](#step-4---run-the-analysis)
+  - [Profiles](#profiles)
+  - [Parameters Details](#parameters-details)
+    - [AWS](#aws)
+    - [GCP](#gcp)
+  - [Docker Images](#docker-images)
+    - [Workflow](#Workflow)
+    - [Initialization](#Initialization)
 
 ---
 
@@ -53,12 +54,13 @@ CEI provides:
   - Orientation-aware Alu element analysis
 
 ---
+## Computational Cloud-Native Pipeline         
 
-## 🚀 Getting Started
+### 🚀 Getting Started 
 
 Before running the workflows, you must follow the initialization sequence below.
 
-### Step 1 - Initialize the Machine
+#### Step 1 - Initialize the Machine
 Make sure your machine has updated versions of [Nextflow](https://www.nextflow.io/docs/latest/install.html) and [Docker](https://docs.docker.com/engine/install/). Make sure your user account has permission to access the Docker daemon.    
 In addition, the following should be available: `wget`, `curl`, `gzip`, `awk`. Notice `zip` and  `unzip` are also required for Nextflow installation.     
 Storage requirements for initialization: 350GB.     
@@ -66,7 +68,7 @@ Per-platform requirements:
 - AWS - download and initialize [AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html)
 - GCP - download and initialize [gcloud CLI](https://cloud.google.com/sdk/docs/install) (including `gsutil`), initialize [GCP credentials](https://nextflow.io/docs/latest/google.html#cloud-batch) and make sure [GCP Batch API](https://cloud.google.com/batch/docs/get-started) is enabled.
 
-### Step 2 - Initialize the Bucket
+#### Step 2 - Initialize the Bucket
 Create a bucket for resources and output.      
 AWS - downlo       
 - GCP - uniform access to bucket and the following IAM permissions:
@@ -79,7 +81,7 @@ AWS - downlo
 | **Viewers of the project**| Storage Legacy Bucket Reader, Storage Legacy Object Reader        |
 
 
-### Step 3 - Initialize Resources
+#### Step 3 - Initialize Resources
 Run the resource initialization script:
 ```bash
 nohup sh CloudPipeline/Init/init_main.sh <PLATFORM> <BUCKET_NAME> <NUM_THREADS>  > init.out 2> init.err &
@@ -110,7 +112,7 @@ nohup ~/nextflow -c CloudPipeline/AWS/SRA_pipeline/rna_editing.config -bg run Cl
 ```
 ---
     
-## Profiles
+### Profiles
 The following profiles are supported. Any combination of profile options can be used from these categories, but at least one profile must be used from each category. See [Nextflow documentation](https://www.nextflow.io/docs/latest/config.html#config-profiles) to learn more about profiles.       
 
 | Category  | Options | Description | Steps Affected |
@@ -126,10 +128,10 @@ Read length should match the general read length or below, as reads shorten than
     
 ---
     
-## Parameters Details
+### Parameters Details
 The following parameters must be provided, either directly via flags or within a configuration file:
     
-### AWS        
+#### AWS        
 For using AWS to run on SRA (see [Nextflow for Fargate documentation](https://www.nextflow.io/docs/latest/aws.html#aws-fargate)):
 | Parameter  | Description | Type   | Configuration File |
 |------------|-------------|--------|--------------------|
@@ -159,7 +161,7 @@ For using AWS to run on TCGA (see [Nextflow for Fargate documentation](https://w
 | `--run_title` | Title of current run in general config | Per-run parameter | General config |
 | `--gdc_UUID_list` | File with UUID accessions | Per-run parameter | General config |
      
-### GCP      
+#### GCP      
 For GCP:
 | Parameter  | Description | Type   | Configuration File |
 |------------|-------------|--------|--------------------|
@@ -173,8 +175,8 @@ For GCP:
 ---
     
 
-## Docker Images
-### Workflow
+### Docker Images
+#### Workflow
 | Step  | Image | Source | 
 |-------|-------|--------|
 | Download SRA FASTQ files | levanonlab/sratoolkit:3.2.1 | [staphb/sratoolkit:3.2.1](https://hub.docker.com/r/staphb/sratoolkit/) |
@@ -186,7 +188,7 @@ For GCP:
 | Per-site editing quantification | levanonlab/cmpileup:1.0 |   |
 | Download TCGA BAM files | levanonlab/gdc-client:2.3.0 |  |
 
-### Initialization       
+#### Initialization       
 | Step  | Image | Source | 
 |-------|-------|--------|
 | Resource processing | levanonlab/bedtools:2.31.1 | [quay.io/biocontainers/bedtools:2.31.1--h13024bc_3](https://quay.io/repository/biocontainers/bedtools?tab=tags&tag=latest) |
