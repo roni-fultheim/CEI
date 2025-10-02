@@ -94,7 +94,7 @@ nohup sh CloudPipeline/Init/init_main.sh <PLATFORM> <BUCKET_NAME> <NUM_THREADS> 
 
 Default for number of threads for generation of STAR and Salmon indices is 10. STAR requires at least 64G RAM for this process.
 
-### Step 4 - Run the Analysis
+#### Step 4 - Run the Analysis
 After initialization, launch the analysis workflow.     
 Example for AWS - for GCP, use the files within the GCP directory.      
 [Profiles](#profiles) and [parameters](#parameters-details) detailed below.        
