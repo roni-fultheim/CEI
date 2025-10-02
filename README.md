@@ -39,19 +39,22 @@ This project offers:
 
 ## 📁 Repository Structure
 CEI provides:
-
-- A scalable cloud-native workflow for computing:
-  - The **Cytoplasmic Editing Index (CEI)**  
-  - The **Global Alu Editing Index ([AEI](https://www.nature.com/articles/s41592-019-0610-9))**
-  - Editing within known editing sites for [human](https://doi.org/10.1038/s41467-022-28841-4) and [mouse](https://doi.org/10.1186/gb-2014-15-1-r5)
-  - Gene expression using [Salmon](https://salmon.readthedocs.io/en/latest/salmon.html)
-- Infrastructure support for:
-  - **AWS and GCP** - note that the AWS pipeline is more advanced and we recommend using this version.
-  - Parallelized processing of **SRA** (FASTQ) and **TCGA** (BAM) samples.
-- Full analysis and plotting scripts for:
-  - Benchmarking CEI vs global index
-  - Immune-related editing response
-  - Orientation-aware Alu element analysis
+- Cloud-Native Pipeline
+  - A scalable cloud-native workflow for computing:
+    - The **Cytoplasmic Editing Index (CEI)**  
+    - The **Global Alu Editing Index ([AEI](https://www.nature.com/articles/s41592-019-0610-9))**
+    - Editing within known editing sites for [human](https://doi.org/10.1038/s41467-022-28841-4) and [mouse](https://doi.org/10.1186/gb-2014-15-1-r5)
+    - Gene expression using [Salmon](https://salmon.readthedocs.io/en/latest/salmon.html)
+  - Infrastructure support for:
+    - **AWS and GCP** - note that the AWS pipeline is more advanced and we recommend using this version.
+    - Parallelized processing of **SRA** (FASTQ) and **TCGA** (BAM) samples.
+  - Full analysis and plotting scripts for:
+    - Benchmarking CEI vs global index
+    - Immune-related editing response
+    - Orientation-aware Alu element analysis
+- Analysis
+  - Python script for generating inverted and tandem repeats, including Conda yml file with enviroment requirements.
+  - All scripts for reproducing article figures and annotations
 
 ---
 ## Computational Cloud-Native Pipeline         
