@@ -56,7 +56,7 @@ CEI provides:
 ---
 ## Computational Cloud-Native Pipeline         
 
-### 🚀 Getting Started 
+### 🚀 Getting Started - Initialization
 
 Before running the workflows, you must follow the initialization sequence below.
 
@@ -82,7 +82,7 @@ AWS - downlo
 
 
 #### Step 3 - Initialize Resources
-Run the resource initialization script:
+Run the resource initialization script to initialize all resources for human (hg38) and mm10 (mouse):
 ```bash
 nohup sh CloudPipeline/Init/init_main.sh <PLATFORM> <BUCKET_NAME> <NUM_THREADS>  > init.out 2> init.err &
 ```
@@ -92,9 +92,10 @@ nohup sh CloudPipeline/Init/init_main.sh <PLATFORM> <BUCKET_NAME> <NUM_THREADS> 
 | `BUCKET_NAME` | 2 | Resources bucket name | Pre-created bucket name (not including `s3://` or `gs://`) |
 | `NUM_THREADS` | 3 | Number of threads for STAR and salmon index generation | Positive whole numbers |           
 
-Default for number of threads for generation of STAR and Salmon indices is 10. STAR requires at least 64G RAM for this process.
+Default for number of threads for generation of STAR and Salmon indices is 10. STAR requires at least 64G RAM for this process.      
+For other organisms, you must supply all resources downloaded in pipeline and them generate STAR and Salmon indices.
 
-#### Step 4 - Run the Analysis
+### Run the Analysis
 After initialization, launch the analysis workflow.     
 Example for AWS - for GCP, use the files within the GCP directory.      
 [Profiles](#profiles) and [parameters](#parameters-details) detailed below.        
