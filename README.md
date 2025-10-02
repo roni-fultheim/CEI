@@ -24,6 +24,7 @@ This repository contains both the **cloud-computing platform** and **analysis co
   - [Docker Images](#docker-images)
     - [Workflow](#Workflow)
     - [Initialization](#Initialization)
+- [Computation of Inverted and Tandem Repeats](#computation-of-inverted-and-tandem-repeats)
 
 ---
 
@@ -199,5 +200,25 @@ For GCP:
 | Resource processing | levanonlab/bigbedtobed:482--h0b57e2e_0 | [quay.io/biocontainers/ucsc-bigbedtobed:482--h0b57e2e_0](https://quay.io/repository/biocontainers/bedtools?tab=tags&tag=latest) |
 | Region index generation | levanonlab/rna-editing-index-lite:1.0 | |
 | Salmon index generation | levanonlab/salmon:1.10.2--hecfa306_0 | [quay.io/biocontainers/salmon:1.10.2--hecfa306_0](https://quay.io/repository/biocontainers/salmon?tab=tags&tag=1.10.2--hecfa306_0) |
-| STAR index generation | levanonlab/star:2.7.10b--h9ee0642_0 | [quay.io/biocontainers/star:2.7.10b--h9ee0642_0](https://quay.io/repository/biocontainers/star?tab=tags&tag=2.7.10b--h9ee0642_0) |
+| STAR index generation | levanonlab/star:2.7.10b--h9ee0642_0 | [quay.io/biocontainers/star:2.7.10b--h9ee0642_0](https://quay.io/repository/biocontainers/star?tab=tags&tag=2.7.10b--h9ee0642_0) |       
 
+
+## Computation of Inverted and Tandem Repeats      
+### Prepare
+#### Enviroment
+This script uses python 3.8 and [pybedtools](https://daler.github.io/pybedtools/index.html). You can install these or use the supplied `.yml` file.
+#### Resources
+Required resources are the repeat file and regions file, both BED6 format.        
+Note that for repeat file the score column (4) has no use and can contain any information. The family column (5) can contain the repeat family names (for example, B1 or B2 for mouse) a single uniform value if no per-family computation is required (for example, Alu for human).       
+For the regions file, the name (4) and score (5) columns are not of use.      
+Both files can be given as plain text or gzipped.      
+### Run
+Example command:     
+```bash
+findOppositeOrientationRepeatsInRegions.py -r repeats_file.bed.gz -i regions_file.bed -o output_directory
+```
+The script gives many options for different output modes, filtering, restrictions and computations and all can be detailed using:     
+
+```bash
+findOppositeOrientationRepeatsInRegions.py --help
+```
