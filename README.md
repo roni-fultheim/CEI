@@ -111,7 +111,7 @@ Change the user parameters within ``CloudPipeline/AWS/SRA_pipeline/rna_editing.u
 ```bash
 nohup ~/nextflow -c CloudPipeline/AWS/SRA_pipeline/rna_editing.config -bg run CloudPipeline/AWS/SRA_pipeline/rna_editing.nf -profile <SE,stranded,RL75,hg38> --run_title <RUN_TITLE> --srrACC_list <SRR_LIST> > log.out 2> log.err &
 ```
-For restricted access data (dbGaP, supported only on AWS)
+For restricted access data (dbGaP)
 ```bash
 nohup ~/nextflow -c CloudPipeline/AWS/SRA_pipeline/rna_editing.config -bg run CloudPipeline/AWS/SRA_pipeline/rna_editing.nf -profile <SE,stranded,RL75,hg38> --run_title <RUN_TITLE> --srrACC_list <SRR_LIST> --NGC_file <NGC_FILE> > log.out 2> log.err &
 ```
