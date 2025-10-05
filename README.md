@@ -115,7 +115,8 @@ For restricted access data (dbGaP)
 ```bash
 nohup ~/nextflow -c CloudPipeline/AWS/SRA_pipeline/rna_editing.config -bg run CloudPipeline/AWS/SRA_pipeline/rna_editing.nf -profile <SE,stranded,RL75,hg38> --run_title <RUN_TITLE> -bucket-dir <NEXTFLOW_BUCKET_WORKDIR> --srrACC_list <SRR_LIST> --NGC_file <NGC_FILE> > log.out 2> log.err &
 ```
-Note the `-bucket-dir <NEXTFLOW_BUCKET_WORKDIR>` is only required for AWS.   
+Note the `-bucket-dir <NEXTFLOW_BUCKET_WORKDIR>` is only required for AWS.        
+
 ---
     
 ### Profiles
