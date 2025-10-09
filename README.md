@@ -74,7 +74,7 @@ Per-platform requirements:
 
 #### Step 2 - Initialize the Bucket
 Create a bucket for resources and output.      
-AWS - downlo       
+- AWS - follow the security credentials and IAM policies as detailed in [Nextflow documentation](https://www.nextflow.io/docs/edge/aws.html)        
 - GCP - uniform access to bucket and the following IAM permissions:
 
 | **Principal**            | **Role**                             |
