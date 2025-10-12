@@ -54,7 +54,7 @@ CEI provides:
     - Immune-related editing response
     - Orientation-aware Alu element analysis
 - Analysis
-  - Python script for generating inverted and tandem repeats, including Conda yml file with enviroment requirements.
+  - Python script for generating inverted and tandem repeats, including Conda `.yml` file with enviroment requirements.
   - All scripts for reproducing article figures and annotations
 
 ---
