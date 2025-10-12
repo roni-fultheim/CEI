@@ -169,7 +169,7 @@ For using AWS to run on TCGA (see [Nextflow for Fargate documentation](https://w
 | `--gdc_UUID_list` | File with UUID accessions | Per-run parameter | General config |
      
 #### GCP      
-For GCP:
+For using GCP to run on SRA:     
 | Parameter  | Description | Type   | Configuration File |
 |------------|-------------|--------|--------------------|
 | `--project_name` | GCP project workspace name | GCP parameter | User parameters config |
