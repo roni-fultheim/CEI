@@ -211,7 +211,7 @@ For using GCP to run on SRA:
 This script uses python 3.8 and [pybedtools](https://daler.github.io/pybedtools/index.html). You can install these or use the supplied `.yml` file.
 #### Resources
 Required resources are the repeat file and regions file, both BED6 format.        
-Note that for repeat file the score column (4) has no use and can contain any information. The family column (5) can contain the repeat family names (for example, B1 or B2 for mouse) a single uniform value if no per-family computation is required (for example, Alu for human).       
+Note that for repeat file the score column (4) has no use and can contain any information. The family column (5) can contain the repeat family names (for example, B1 or B2 for mouse) a single uniform value if no per-family computation is required (for example, "Alu" for human).       
 For the regions file, the name (4) and score (5) columns are not of use.      
 Both files can be given as plain text or gzipped.      
 ### Run
