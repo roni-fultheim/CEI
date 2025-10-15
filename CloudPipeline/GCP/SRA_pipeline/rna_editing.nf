@@ -455,7 +455,7 @@ process cmpileup {
         // path "/media", emit: cmp_logs
     script:
         def log_file = "${params.logs_path}/${srr}_runLog.txt"
-        path_res="${params.cmpileups_tables}/${srr}_KnownSites_mpileup.cmpileup"
+        path_res="${params.cmpileups_tables}/${srr}*cmpileup"
         // filter reads only if its paired end
         def filtering_commmand = params.isPaired ? "pe_filter=\\'-f\\ 2\\'" : ""
         """
@@ -479,10 +479,9 @@ process cmpileup {
         python /home/biodocker/GGPS/Session/PipelineManger.py -t 0,7 -c ${params.cmpileup_ini} -o /media -l /media/Log -d /data -f Aligned.sortedByCoord.out.bam --follow_links -a regions_coordinates_bed=\\'${params.cmpileup_sites}\\' genome_fasta=\\'${params.genome_file}\\' bam_file_suffix=\\'Aligned.sortedByCoord.out.bam\\' genome_index_path=\\'/data/output/cmpileups/${params.genome_cmpileup_sites_index_name}\\' $filtering_commmand
 
         # copy results to result dir
-        if [ $params.isStranded = true ]; then
-            mkdir ${path_res}
-        fi
-        cp /media/${srr}/*cmpileup  ${path_res}
+        mkdir -p ${params.cmpileups_tables}
+
+        cp /media/${srr}/*cmpileup  ${params.cmpileups_tables}
 
 
         
