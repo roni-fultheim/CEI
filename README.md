@@ -65,16 +65,31 @@ CEI provides:
 Before running the workflows, you must follow the initialization sequence below.
 
 #### Step 1 - Initialize the Machine
+The machine should have at least 64GB RAM, number of cores matching your chosen `NUM_THREADS` parameter in the initialization script command (16 cores is recommended).
+Storage requirements for initialization: 350GB.
+
+- AWS - ensure that your AWS machine role is configured with the necessary policies as outlined in the [Nextflow AWS documentation](https://www.nextflow.io/docs/edge/aws.html).
+
+
 Make sure your machine has updated versions of [Nextflow](https://www.nextflow.io/docs/latest/install.html) and [Docker](https://docs.docker.com/engine/install/). Make sure your user account has permission to access the Docker daemon.    
 In addition, the following should be available: `wget`, `curl`, `gzip`, `awk`. Notice `zip` and  `unzip` are also required for Nextflow installation.     
-Storage requirements for initialization: 350GB.     
+
 Per-platform requirements:    
-- AWS - download and initialize [AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html)
-- GCP - download and initialize [gcloud CLI](https://cloud.google.com/sdk/docs/install) (including `gsutil`), initialize [GCP credentials](https://nextflow.io/docs/latest/google.html#cloud-batch) and make sure [GCP Batch API](https://cloud.google.com/batch/docs/get-started) is enabled.
+- AWS - download and initialize [AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html).
+This project utilizes the AWS Batch Fargate service as the execution environment. It is essential to configure an instance role for the Batch service with the following permissions:
+    - AmazonS3FullAccess
+    - AmazonEC2ContainerServiceforEC2Role
+    - AmazonEC2ContainerRegistryFullAccess
+    - AmazonEC2FullAccess
+    - AmazonECS_FullAccess
+    - AWSBatchServiceRole
+  - Nextflow on AWS Fargate leverages [Seqera Wave](https://seqera.io/wave). Ensure you have a Seqera (Tower) token as outlined in the [Wave documentation](https://www.nextflow.io/docs/edge/wave.html#wave-page).
+  - For additional guidance, refer to the [Nextflow Fargate documentation](https://www.nextflow.io/docs/edge/aws.html#aws-fargate) and the [AWS Fargate documentation](https://docs.aws.amazon.com/batch/latest/userguide/fargate.html). 
+- GCP - download and initialize [gcloud CLI](https://cloud.google.com/sdk/docs/install) (including `gsutil`), initialize [GCP credentials](https://nextflow.io/docs/latest/google.html#cloud-batch) and make sure [GCP Batch API](https://cloud.google.com/batch/docs/get-started) is enabled. Configure Google credentials and ensure the Google Cloud Batch API is enabled as described in the [Nextflow documentation](https://www.nextflow.io/docs/latest/google.html#google-cloud).
 
 #### Step 2 - Initialize the Bucket
 Create a bucket for resources and output.      
-- AWS - follow the security credentials and IAM policies as detailed in [Nextflow documentation](https://www.nextflow.io/docs/edge/aws.html)        
+- AWS - create a bucket that your machine role and batch instance role can access according to the policies you set from [Nextflow documentation](https://www.nextflow.io/docs/edge/aws.html)
 - GCP - uniform access to bucket and the following IAM permissions:
 
 | **Principal**            | **Role**                             |
